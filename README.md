@@ -1,73 +1,89 @@
-# Welcome to your Lovable project
+# DeFiLens
 
-## Project info
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-green.svg)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/typescript-%5E5.5.3-blue.svg)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/react-%5E18.3.1-blue.svg)](https://reactjs.org/)
 
-**URL**: https://lovable.dev/projects/5adbbbfb-6d50-4898-91c0-cde5db2412f4
+**Real-time cross-chain oracle monitoring and security analysis dashboard for DeFi protocols and financial institutions.**
 
-## How can I edit this code?
+## 🎯 Overview
 
-There are several ways of editing your application.
+DeFiLens provides comprehensive monitoring of oracle networks across Ethereum, BSC, Polygon, and Avalanche. Track price feeds, detect security threats, and identify arbitrage opportunities with professional-grade analytics.
 
-**Use Lovable**
+## ✨ Key Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/5adbbbfb-6d50-4898-91c0-cde5db2412f4) and start prompting.
+### 🔍 **Multi-Chain Oracle Monitoring**
+- Real-time price feeds from Chainlink, Band Protocol, and Tellor
+- Cross-chain price comparison and arbitrage detection
+- Interactive candlestick charts with technical indicators
+- Live Bitcoin trading charts with volume analysis
 
-Changes made via Lovable will be committed automatically to this repo.
+### 🛡️ **Advanced Security Analysis**
+- **6-Category Security Scoring**: MEV Protection (85%), Consensus Mechanism (72%), Cryptographic Security (95%), Flash Loan Resistance (88%), Front-Running Protection (78%), Price Manipulation Detection (65%)
+- **Attack Detection**: Sandwich attacks, front-running, and MEV exploit monitoring
+- **Cryptographic Verification**: ECDSA signatures, Merkle proofs, ZK-proof validation
+- **Real-time Threat Alerts**: Automated security notifications
 
-**Use your preferred IDE**
+### 📊 **Professional Dashboard**
+- Modern UI with shadcn/ui and Tailwind CSS
+- Dark/Light mode support
+- Responsive design for all devices
+- Real-time data streaming (2.5s updates)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🚀 Quick Start
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
+- **Node.js 18+** ([Install with nvm](https://github.com/nvm-sh/nvm))
+- **npm** or **bun**
+- **Git**
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```bash
+# Clone the repository
+git clone https://github.com/your-username/defilens.git
+cd defilens
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Install dependencies
+npm install
+# or
+bun install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
+# or
+bun run dev
 ```
 
-**Edit a file directly in GitHub**
+**Access the dashboard at: http://localhost:8080**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Environment Setup (Optional)
+Create `.env` file for custom RPC endpoints:
+```env
+VITE_ETHEREUM_RPC_URL=https://eth.llamarpc.com
+VITE_BSC_RPC_URL=https://bsc-dataseed1.binance.org
+VITE_POLYGON_RPC_URL=https://polygon-rpc.com
+VITE_AVALANCHE_RPC_URL=https://api.avax.network/ext/bc/C/rpc
+```
 
-**Use GitHub Codespaces**
+## 📖 Usage
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. **Select Chains**: Choose source and target blockchains from dropdowns
+2. **Pick Oracle Provider**: Switch between Chainlink, Band Protocol, or Tellor
+3. **Monitor Security**: View real-time security scores and threat alerts
+4. **Analyze Trading**: Use Bitcoin charts for market analysis and arbitrage opportunities
 
-## What technologies are used for this project?
+### Key Components
+- **Oracle Controls**: Chain selection, provider switching, refresh controls
+- **Real-Time Charts**: Live price feeds with customizable timeframes
+- **Security Dashboard**: Comprehensive security analysis with threat monitoring
+- **Performance Metrics**: Oracle uptime, response times, reliability scores
 
-This project is built with:
+## 🔧 Technical Stack
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/5adbbbfb-6d50-4898-91c0-cde5db2412f4) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- **Frontend**: React 18 + TypeScript + Vite
+- **UI**: shadcn/ui + Radix UI + Tailwind CSS
+- **Charts**: Recharts for data visualization
+- **Blockchain**: Web3.js + Ethers.js
+- **Data Sources**: Chainlink contracts, Band Protocol API, RPC endpoints
